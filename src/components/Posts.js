@@ -7,6 +7,9 @@ import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 import Container from '@material-ui/core/Container'
 
+
+window.__MUI_USE_NEXT_TYPOGRAPHY_VARIANTS__ = true;
+
 const useStyles = makeStyles((theme) => ({
   cardMedia: {
     paddingTop: '56.25%', // 16:9

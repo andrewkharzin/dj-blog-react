@@ -8,6 +8,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import Register from './components/auth/Register'
 import Login from './components/auth/Login'
+import Logout from './components/auth/Logout'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
@@ -18,6 +19,7 @@ root.render(
         <Route exact path='/' element={<App />} />
         <Route path='/register' element={<Register />} />
         <Route path='/login' element={<Login />} />
+        <Route path='/logout' element={<Logout />} />
        
       </Routes>
       <Footer />

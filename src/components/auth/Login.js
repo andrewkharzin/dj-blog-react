@@ -14,6 +14,9 @@ import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/core/styles'
 import Container from '@material-ui/core/Container'
 
+
+window.__MUI_USE_NEXT_TYPOGRAPHY_VARIANTS__ = true;
+
 const useStyles = makeStyles((theme) => ({
   paper: {
     marginTop: theme.spacing(8),
@@ -35,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 export default function SignIn() {
-  const history = useNavigate()
+  const navigate = useNavigate()
   const initialFormData = Object.freeze({
     email: '',
     password: '',
@@ -64,7 +67,7 @@ export default function SignIn() {
         localStorage.setItem('refresh_token', res.data.refresh)
         axiosInstance.defaults.headers['Authorization'] =
           'JWT ' + localStorage.getItem('access_token')
-        history.push('/')
+          navigate('/')
         //console.log(res);
         //console.log(res.data);
       })
